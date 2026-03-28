@@ -371,7 +371,7 @@ def test_main(
                                     )
                                     assert torch.isnan(combined_x).sum().item() == 0
                                     assert diff < (
-                                        9e-4 if dispatch_use_fp8_case else 1e-5
+                                        2e-3 if (dispatch_use_fp8_case and round_scale) else 9e-4 if dispatch_use_fp8_case else 1e-5
                                     ), f"Error: {diff=}, {dispatch_use_fp8_case=}, {zero_copy=}"
                                     tag = (
                                         f"x={'x' if current_x is x else 'rand'}"

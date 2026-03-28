@@ -64,7 +64,7 @@ static constexpr int kMaxMRChunks = 128;
 #define kMaxInflightLowLatency 32
 #define kMaxInflightNormal 8
 #define kChannelPerProxy 8
-#define kNumProxyThs 4
+#define kNumProxyThs 2
 // NCCL EFA plugin default: 8 MB mimicing (512KB*16)
 // NCCL IB net.cc default: 2 MB (128KB*16)
 #define kMaxInflightBytes SIZE_MAX
